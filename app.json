@@ -1,10 +1,44 @@
 {
-  "name": "torrent-aio-bot",
-  "description": "All in one bot for torrenting",
-  "repository": "https://github.com/patheticGeek/torrent-aio-bot",
-  "keywords": ["node", "express", "bot", "torrent", "automation"],
-  "builpacks": [
-    { "url": "heroku/nodejs" },
-    { "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git" }
-  ]
+	"name": "无情的播种机器人🤖",
+	"description": "All in one bot for torrenting",
+	"repository": "https://github.com/patheticGeek/torrent-aio-bot",
+	"keywords": ["node", "express", "bot", "torrent", "automation"],
+	"env": {
+		"AUTH_CODE": {
+			"description": "需要云盘Auth Code才能在驱动器中访问. 去哪里申请？ 请前往 \"http://torrent-aio-bot.herokuapp.com/drivehelp\" 生成.",
+      			"value": "类似于 4/1QHtT6m6DunqA_Dc_K2zSzkYft3Va8wEpxEg7Xig61fY-fBcTPxbhXA/"
+		},
+		"CLIENT_ID": {
+			"description": "需要云盘Auth Code才能在驱动器中访问. 去哪里申请？ 请前往 \"https://developers.google.com/drive/api/v3/quickstart/nodejs\" 申请.",
+			"value": "类似于 209800747726-77hnjivdrifpcp0f7e1d08eqtobp7sl5.apps.googleusercontent.com"
+		},
+		"CLIENT_SECRET": {
+			"description": "需要云盘Auth Code才能在驱动器中访问. 去哪里申请？ 请前往 \"https://developers.google.com/drive/api/v3/quickstart/nodejs\" 申请.",
+			"value": "类似于 7Tvz8hPufx-O7XHK583j8Gtm"
+		},
+		"GDRIVE_PARENT_FOLDER": {
+			"description": "云盘文件夹Id.",
+			"value": "类似于 7Tvz8hPufx-O7XHK583j8Gtm"
+		},
+		"SEARCH_SITE": {
+			"description": "Full link of your Heroku App with the final /",
+			"value": "https://torrent-aio-bot.herokuapp.com/"	
+		},
+		"SITE": {
+			"description": "Full link of your Heroku App with the /",
+			"value": "https://<App Name>.herokuapp.com/"	
+		},
+		"TOKEN": {
+			"description": "需要云盘Auth Code才能在驱动器中访问. 去哪里申请？ 请前往 \"http://torrent-aio-bot.herokuapp.com/drivehelp\" 生成",
+			"value": "类似于 {\"access_toke\":\"ya29.a****************\"}"
+			
+		},
+		"TELEGRAM_TOKEN": {
+			"description": "电报机器人TOKEN. 去哪里申请？ @BotFather "
+		}
+	}
+	"builpacks": [
+		{ "url": "heroku/nodejs" },
+		{ "url": "https://github.com/jontewks/puppeteer-heroku-buildpack.git" }
+	]
 }
