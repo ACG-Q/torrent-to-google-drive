@@ -6,7 +6,7 @@ function footer() {
 			<div className="content">
 				<div className="nav-logo">
 					<h1 className="h4 m-0">Copyright @ 2021.
-                        <a className="alpha" href="https://github.com/ACG-Q/torrent-to-google-drive">CyberTOR-Beta</a>
+                        <a className="alpha" href="https://github.com/ACG-Q/torrent-to-google-drive">无情的播种机器人🤖</a>
 					</h1>
 				</div>
 				<div className="nav-links" style={{flexDirection: "row"}}>
