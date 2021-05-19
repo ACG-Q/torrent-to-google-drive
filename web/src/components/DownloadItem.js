@@ -1,3 +1,10 @@
+/*
+ * @Author: 六记
+ * @Date: 2021-05-18 18:26:33
+ * @LastEditTime: 2021-05-18 18:34:40
+ * @Description: 汉化
+ * @FilePath: web\src\components\DownloadItem.js
+ */
 import React, { useState } from "react";
 
 function DownloadItem({ torrent }) {
@@ -30,19 +37,19 @@ function DownloadItem({ torrent }) {
       )}
       <div className="card-body compact">
         <div className="d-flex space-between">
-          <div className="text-400">Status: </div>
+          <div className="text-400">状态: </div>
           <div>{torrent.status}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Size: </div>
+          <div className="text-400">大小: </div>
           <div>{torrent.total}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Downloaded: </div>
+          <div className="text-400">已下载: </div>
           <div>{torrent.downloaded}</div>
         </div>
         <div className="d-flex space-between">
-          <div className="text-400">Speed: </div>
+          <div className="text-400">下载速度: </div>
           <div>{torrent.speed}</div>
         </div>
         {!torrent.done && (

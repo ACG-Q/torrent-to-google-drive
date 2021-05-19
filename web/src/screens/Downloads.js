@@ -15,7 +15,7 @@ function Downloads() {
     setAdding(true);
 
     if (link.indexOf("magnet:") !== 0) {
-      setAddingError("Link is not a magnet link");
+      setAddingError("当前链接好像不是磁力链接");
     } else {
       setAddingError("");
       const resp = await fetch(`/api/v1/torrent/download?link=${link}`);
@@ -23,7 +23,7 @@ function Downloads() {
       if (resp.status === 200) {
         setLink("");
       } else {
-        setAddingError("An error occured");
+        setAddingError("发生了一个错误");
       }
     }
 
@@ -49,7 +49,7 @@ function Downloads() {
           Add
         </button>
       </form>
-      {error && <div className="text-danger mt-1">An error occured. Check your internet.</div>}
+      {error && <div className="text-danger mt-1">发生错误.检查你的互联网.</div>}
       {data && (
         <div className="d-flex-column mt-1">
           {data.torrents.map(torrent => (
